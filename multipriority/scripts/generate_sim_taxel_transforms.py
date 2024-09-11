@@ -24,7 +24,7 @@ from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 import json
 
 FORCE_THRESHOLD = -0.1
-urdf_path='/home/mahika/mp_new/multipriority/urdfs/gen3_7dof_vision_with_skin.urdf'
+urdf_path='/home/mahika/mp_new/multipriority/urdfs/gen3_7dof_vision_with_skin_sim.urdf'
 base_pose = np.array([0, 0, 0])
 base_orientation = [0, 0.0, 0.0, 1]
 # pb_robot = KinovaOSCController(
@@ -197,5 +197,3 @@ for i in range(100000):
     #     with open('taxel_data.yaml', 'w') as file:
     #         yaml.dump(taxel_data, file)
     #     break
-
-    prev_obs = obs

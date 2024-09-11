@@ -705,7 +705,7 @@ class UnityRobot(RCareWorldBaseObject):
         world_to_link_tr = currPBOri[linkID]
         print ("Contact Kp: ", Kp)
         # normalVec = world_to_link_tr @ normalVec
-        normalVec_ = np.dot(world_to_link_tr, normalVec)
+        normalVec_ = np.dot(np.linalg.inv(world_to_link_tr), normalVec)
         # print("Contact Vector: ", contactF * normalVec)
 
         error = (desF - contactF)

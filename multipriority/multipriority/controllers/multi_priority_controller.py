@@ -29,7 +29,7 @@ class MultiPriorityController:
         cmd = np.zeros((7, 1))
         cmd_out = np.zeros((7, 1))
         filter = np.eye(7)
-        for controller in self.active_controllers[::-1]:
+        for controller in self.active_controllers:
             # if object type is ContactController then send osc_contact_control fn as argument
             if isinstance(controller, ContactController):
                 print ("\n\nContact Controller running!\n\n")
